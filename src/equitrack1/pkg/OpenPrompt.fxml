@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="117.0" prefWidth="377.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="equitrack1.pkg.OpenPromptController">
+   <children>
+      <Button fx:id="openFile" layoutX="193.0" layoutY="68.0" mnemonicParsing="false" onAction="#onClickOpenFile" prefHeight="25.0" prefWidth="125.0" text="Open" />
+      <Button fx:id="searchFile" layoutX="60.0" layoutY="68.0" mnemonicParsing="false" onAction="#onClickFile" prefHeight="25.0" prefWidth="125.0" text="Search" />
+      <Label fx:id="openFolder" layoutX="60.0" layoutY="39.0" prefHeight="17.0" prefWidth="258.0" text="No File Selected" />
+      <Label layoutX="60.0" layoutY="14.0" prefHeight="17.0" prefWidth="56.0" text="File:" />
+   </children>
+</AnchorPane>

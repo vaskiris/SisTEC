@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="377.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="equitrack1.pkg.PromptController">
+   <children>
+      <TextField fx:id="saveFileName" layoutX="87.0" layoutY="14.0" prefHeight="25.0" prefWidth="264.0" />
+      <Label layoutX="20.0" layoutY="100.0" text="Export as:" />
+      <Button fx:id="saveCsv" layoutX="295.0" layoutY="96.0" mnemonicParsing="false" onAction="#onClickSaveCsv" prefHeight="25.0" prefWidth="56.0" text="Save" />
+      <ChoiceBox fx:id="myChoices" layoutX="87.0" layoutY="96.0" prefHeight="25.0" prefWidth="199.0" />
+      <Label layoutX="20.0" layoutY="18.0" text="File Name:" />
+      <Button fx:id="path" layoutX="295.0" layoutY="55.0" mnemonicParsing="false" onAction="#onClickPath" prefHeight="25.0" prefWidth="56.0" text="Folder" />
+      <Label fx:id="folder" layoutX="87.0" layoutY="59.0" prefHeight="17.0" prefWidth="199.0" text="No Folder Selected" />
+      <Label layoutX="20.0" layoutY="59.0" prefHeight="17.0" prefWidth="56.0" text="Folder:" />
+   </children>
+</AnchorPane>

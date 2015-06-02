@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="768.0" maxWidth="1024.0" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="equitrack1.pkg.FXMLDocumentController">
+    <children>
+      <Separator layoutX="195.0" layoutY="25.0" orientation="VERTICAL" prefHeight="576.0" prefWidth="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="195.0" AnchorPane.topAnchor="25.0" />
+      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="open" mnemonicParsing="false" onAction="#onClickOpen" text="Open..." />
+              <MenuItem fx:id="export" mnemonicParsing="false" onAction="#onClickExp" text="Export as..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="close" mnemonicParsing="false" onAction="#onClickClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane layoutY="25.0" prefHeight="414.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <tabs>
+          <Tab text="Test">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="390.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="start" layoutX="10.0" layoutY="42.0" mnemonicParsing="false" onAction="#onClickStart" prefHeight="25.0" prefWidth="179.0" text="Start" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="42.0" />
+                        <Button fx:id="stop" layoutX="11.0" layoutY="76.0" mnemonicParsing="false" onAction="#onClickStop" prefHeight="25.0" prefWidth="179.0" text="Stop" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="76.0" />
+                        <Button fx:id="reset" layoutX="11.0" layoutY="110.0" mnemonicParsing="false" onAction="#onClickReset" prefHeight="25.0" prefWidth="179.0" text="Reset" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="110.0" />
+                        <Button fx:id="update" layoutX="10.0" layoutY="476.0" mnemonicParsing="false" onAction="#onClickUpdate" prefHeight="25.0" prefWidth="181.0" text="Update" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                        <Label fx:id="label" alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" layoutX="4.0" layoutY="501.0" maxHeight="1.7976931348623157E308" prefHeight="40.0" prefWidth="192.0" text="Ready" wrapText="true" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" />
+                        <Separator layoutY="145.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="145.0" />
+                        <Label layoutX="80.0" layoutY="157.0" text="Manual" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="157.0" />
+                        <Button fx:id="MotorUp" layoutX="10.0" layoutY="183.0" mnemonicParsing="false" onAction="#onClickMotorUp" text="Motor Up" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="183.0" />
+                        <Button fx:id="MotorDown" layoutX="10.0" layoutY="216.0" mnemonicParsing="false" onAction="#onClickMotorDown" text="Motor Down" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="216.0" />
+                        <AnchorPane fx:id="dataSelection" layoutX="10.0" layoutY="260.0" prefHeight="200.0" prefWidth="179.0" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Configurations">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="serialComSetup" layoutX="14.0" layoutY="43.0" text="COM3" />
+                        <Label fx:id="comText" alignment="CENTER" layoutX="46.0" layoutY="20.0" prefHeight="17.0" prefWidth="88.0" text="COM Port" />
+                        <Separator layoutY="92.0" prefWidth="200.0" />
+                        <Label layoutX="14.0" layoutY="120.0" text="Type" />
+                        <ChoiceBox fx:id="tipoTeste" layoutX="14.0" layoutY="137.0" prefWidth="150.0">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="1 - Tensão" />
+                                <String fx:value="0 - Compressão" />
+                                </FXCollections>
+                            </items>
+                        </ChoiceBox>
+                        <Label layoutX="16.0" layoutY="173.0" text="Velocity" />
+                        <Separator layoutY="310.0" prefWidth="200.0" />
+                        <Button fx:id="aplicarTeste" layoutX="14.0" layoutY="278.0" mnemonicParsing="false" onAction="#onClickSendTest" prefHeight="25.0" prefWidth="151.0" text="Apply" />
+                        <Label layoutX="75.0" layoutY="95.0" text="Test">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="318.0" text="Calibration" />
+                        <Button fx:id="calibrate" layoutX="14.0" layoutY="335.0" mnemonicParsing="false" onAction="#onClickCalibrate" prefHeight="25.0" prefWidth="150.0" text="Zero Adjust" />
+                        <ChoiceBox fx:id="aquisicao" layoutX="14.0" layoutY="242.0" prefWidth="150.0">
+                           <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                 <String fx:value="1 Aquisição/s" />
+                                 <String fx:value="2 Aquisição/s" />
+                                 <String fx:value="3 Aquisição/s" />
+                                 <String fx:value="4 Aquisição/s" />
+                                 <String fx:value="5 Aquisição/s" />
+                              </FXCollections>
+                           </items>
+                        </ChoiceBox>
+                        <Label layoutX="16.0" layoutY="225.0" text="Aquisition Rate" />
+                        <TextField fx:id="velocityT" layoutX="14.0" layoutY="190.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="190.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <LineChart fx:id="chart" layoutX="209.0" layoutY="25.0" prefHeight="400.0" prefWidth="590.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="25.0">
+        <xAxis>
+          <NumberAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+    </children>
+</AnchorPane>
