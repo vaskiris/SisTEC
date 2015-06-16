@@ -12,7 +12,6 @@ package data.pkg;
  */
 import java.io.FileWriter;
 import java.io.IOException;
-import static equitrack1.pkg.FXMLDocumentController.data; 
 
 public class GenerateCsv
 {
